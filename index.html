@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f6f1">
+  <meta name="description" content="일정, 생활습관, 일기, 독서를 한곳에 기록하는 나만의 오프라인 성장 관리 앱">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="application-name" content="MY LIFE OS">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <title>MY LIFE OS | 나의 인생 경영</title>
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar" aria-label="주 메뉴">
+      <div class="brand-area">
+        <div class="brand-symbol" aria-hidden="true">M<span>✦</span></div>
+        <div><div class="brand-name">MY LIFE OS</div><div class="brand-desc">나의 인생 경영</div></div>
+      </div>
+      <div class="side-caption">WORKSPACE</div>
+      <nav id="desktop-nav" class="desktop-nav"></nav>
+      <div class="sidebar-bottom">
+        <div class="side-note"><span class="tiny-sun">✳</span><strong>작은 실행이 큰 변화를 만듭니다.</strong><span>어제보다 한 걸음, 오늘.</span></div>
+        <button class="side-settings" data-action="settings" type="button"><span class="settings-gear">⚙</span> 설정 · 백업</button>
+      </div>
+    </aside>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="mobile-mark">M✦</span><span>MY LIFE OS</span></div>
+        <div class="topbar-desktop"><span class="topbar-dot"></span> 나만의 성장 기록 공간</div>
+        <div class="topbar-right"><span class="sync-status" id="save-status"><i></i> 내 기기에 저장</span><button class="icon-button top-settings" data-action="settings" aria-label="설정 및 백업" type="button" title="설정 및 백업">⚙</button></div>
+      </header>
+      <main id="main" class="main" tabindex="-1" aria-live="polite"></main>
+      <footer class="desktop-footer">© MY LIFE OS · 모든 개인 기록은 이 기기에 저장됩니다.</footer>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="하단 메뉴"></nav>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root" role="status" aria-live="polite"></div>
+  <input id="backup-file" class="sr-only" type="file" accept="application/json,.json" aria-label="백업 파일 선택">
+  <script src="./app.js" defer></script>
+</body>
+</html>
